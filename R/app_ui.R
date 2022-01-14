@@ -11,33 +11,33 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     
     # List the first level UI elements here 
-    navbarPage(title = div(id="logo-id","tidyCDISC",
-                           img(src="www/app_ICON.png", style="float:left; padding-right:3px; height:25px; width:30px")), 
-               id = "navbarID",
-               windowTitle = "tidyCDISC",
-               tabPanel(
-                 title = "Data",
-                 mod_dataUpload_ui("dataUpload_ui_1")
-               ),
-               tabPanel(
-                 title = "Table Generator",
+    # navbarPage(title = div(id="logo-id","tidyCDISC",
+    #                        img(src="www/app_ICON.png", style="float:left; padding-right:3px; height:25px; width:30px")), 
+    #            id = "navbarID",
+    #            windowTitle = "tidyCDISC",
+    #            tabPanel(
+    #              title = "Data",
+    #              mod_dataUpload_ui("dataUpload_ui_1")
+    #            ),
+    #            tabPanel(
+    #              title = "Table Generator",
                  div(mod_tableGen_ui("tableGen_ui_1"), id = "tableGen")
-               ),
-               tabPanel(
-                 title = "Population Explorer",
-                 # mod_selectData_ui("selectData_ui_1"),
-                 # mod_selectData_ui("popExp_ui_1"),
-                 mod_popExp_ui("popExp_ui_1")
-               ),
-               tabPanel(
-                 title = "Individual Explorer",
-                 mod_indvExp_ui("indvExp_ui_1")
-               )
-      )
-    ,tags$script(
-      HTML("var header = $('.navbar > .container-fluid');
-                                header.append('<a href=\"https://github.com/Biogen-Inc/tidyCDISC/issues/new\"><img src=\"www/github.png\" style=\"width:2.5%;height:2.5%;float:right;padding-top:5px;\"></a>')")
-    )
+      #          ),
+      #          tabPanel(
+      #            title = "Population Explorer",
+      #            # mod_selectData_ui("selectData_ui_1"),
+      #            # mod_selectData_ui("popExp_ui_1"),
+      #            mod_popExp_ui("popExp_ui_1")
+      #          ),
+      #          tabPanel(
+      #            title = "Individual Explorer",
+      #            mod_indvExp_ui("indvExp_ui_1")
+      #          )
+      # )
+    # ,tags$script(
+    #   HTML("var header = $('.navbar > .container-fluid');
+    #                             header.append('<a href=\"https://github.com/Biogen-Inc/tidyCDISC/issues/new\"><img src=\"www/github.png\" style=\"width:2.5%;height:2.5%;float:right;padding-top:5px;\"></a>')")
+    # )
   )
   }
 
